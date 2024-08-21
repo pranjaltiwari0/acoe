@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: grid;
+    width: 300px;
+    margin: auto;
+    gap: 30px;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(240, 232, 232);
+    color: rgb(45, 15, 71);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(59, 59, 126);
+    color: white;
+    border: 2px solid rgb(9, 3, 68);
+}
+
+
+footer p {
+    margin: 5px 0;
+}
+#event-body{
+  height: 50vh;
+  background-image: url(./ACMA\ bg.png);
+}
+
+#assessment-body{
+    height: 60vh;
+    background-image: url(./ACMA\ bg.png);
+}
+.btn{
+    width: 350px;
+}
+
+#quality-system{
+    height: 110vh;
+    background-image: url(./ACMA\ bg.png);
+}
+#middleMNG-body{
+    height: 70vh;
+    background-image: url(./ACMA\ bg.png);
+}
+#product-body{
+    height: 100vh;
+    background-image: url(./ACMA\ bg.png);
+}

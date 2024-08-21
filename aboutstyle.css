@@ -1,0 +1,15 @@
+.about{
+    background-image: url(ACMA\ bg.png);
+    padding: 50px 100px;
+    background-size: 100%;
+    
+}
+.about h3{
+    color:orange;
+    text-align: center;
+    font-size: 3rem;
+}
+.about p{
+    color: white;
+    text-align: justify;
+}

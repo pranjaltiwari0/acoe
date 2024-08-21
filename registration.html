@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACMA Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="regstyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+
+        <!-- nav bar -->
+    <!-- <div id="head_content"></div> -->
+
+    <h1>Safety Leadership and Safety Culture</h1>
+    
+    <h2 class="Sub">Company Information</h2>
+    <div class="container">
+        <form method="post" name="google-sheet">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+            
+            <label for="companyAddress">Company Address:</label>
+            <input type="text" id="companyAddress" name="companyAddress" required>
+            
+            <label for="membershipNo">ACMA Membership No.:</label>
+            <input type="text" id="membershipNo" name="membershipNo" required>
+            
+            <label for="turnover">Company Group Turnover (in Cr. INR):</label>
+            <input type="number" id="turnover" name="turnover" required>
+
+    
+    </div>
+
+    <div class="participant-info-container" id="participant-info-container">
+        <h2 class="sub">
+            Participant's Information
+            <div class="add-button-container">
+                <button type="button" id="addParticipant">+</button>
+                <button type="button" id="deleteLastParticipant">-</button>
+            </div>
+        </h2>
+        <div class="participant-row">
+            <div class="input-container">
+                <input type="text" id="participantNumber" name="participantNumber" value="1" readonly>
+            </div>
+            <div class="input-container">
+                <input type="text" id="participantName" name="participantName" placeholder="Participant’s Name" required>
+            </div>
+            <div class="input-container">
+                <input type="text" id="designation" name="designation" placeholder="Designation" required>
+            </div>
+            <div class="input-container">
+                <input type="tel" id="phoneNo" name="phoneNo" placeholder="Phone No." required>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" name="email" placeholder="Email ID" required>
+            </div>
+        </div>
+        <div class="input-container alt-contact">
+            <input type="tel" id="altContactNo" name="altContactNo" placeholder="Alternate Contact No, In case of Emergency" required>
+        </div>
+    </div>
+    
+    <h2 class="Sub">Accommodation</h2>
+    <div id="acc">   
+        <label style="color: aliceblue;" for="accommodation">Select Option:</label>
+        <select id="accommodation" name="accommodation" required>
+            <option value="single">Room with single occupancy (INR 4000)</option>
+            <option value="double">Room with double occupancy (INR 4500)</option>
+        </select>
+        
+        <h2>Fees</h2>
+        <p>• Up to 2 nominations: INR 12,500 + 18% GST per participant.</p>
+        <p>• 3 to 5 nominations: INR 10,500 + 18% GST per participant.</p>
+        <p>• 6 or more nominations: INR 9,500 + 18% GST per participant.</p>
+        
+        <h2>Terms & Conditions</h2>
+        <p>Complete all fields in the form to ensure accurate processing.</p>
+        <p>Upon submitting the registration form, ACoE will generate a Fee Invoice corresponding to the program fees, and payment processing will follow.</p>
+        <p>Please note that once a tax invoice is issued and the fee is charged, neither the invoice nor the fee can be canceled or refunded under any circumstances.</p>
+        <p>Companies deducting TDS are required to provide details of the deduction for accounting purposes.</p>
+        
+        <h2>Contact Us</h2>
+        <p>Phone: +91 9050415286</p>
+        <p>Email: <a href="mailto:rakesh.kumar@acma.in">rakesh.kumar@acma.in</a></p>
+        <p>Address: SRM University, Engineering block, Ground Floor, Sonipat, Haryana-131029</p>
+    </div>
+        
+        <input class="submit_btn" type="submit"></input>
+    </form>
+         <!-- footer -->
+         <div id="footer_content"></div>
+   
+
+    <script>
+      document.getElementById('addParticipant').addEventListener('click', function() {
+    const container = document.getElementById('participant-info-container');
+
+    
+    const originalParticipantRow = document.querySelector('.participant-row');
+    const newParticipantRow = originalParticipantRow.cloneNode(true);
+
+    
+    const participantNumberInput = newParticipantRow.querySelector('#participantNumber');
+    const participantCount = container.querySelectorAll('.participant-row').length + 1;
+    participantNumberInput.value = participantCount;
+
+  
+    const inputs = newParticipantRow.querySelectorAll('input');
+    inputs.forEach(input => {
+        if (input.type !== 'button' && input.id !== 'participantNumber') {
+            input.value = '';
+        }
+    });
+
+    
+    container.insertBefore(newParticipantRow, document.querySelector('.alt-contact'));
+});
+
+document.getElementById('deleteLastParticipant').addEventListener('click', function() {
+    const container = document.getElementById('participant-info-container');
+    const participantRows = container.querySelectorAll('.participant-row');
+    
+    if (participantRows.length > 1) { 
+        const lastParticipantRow = participantRows[participantRows.length - 1];
+        lastParticipantRow.remove();
+    } else {
+        alert('Cannot delete. At least one participant row must remain.');
+    }
+});
+
+    </script>
+
+
+
+<script>
+  function submitForm() {
+    let formData = {};
+    let participants = [];
+
+    // Assuming each participant has fields like name, email, etc.
+    document.querySelectorAll('.participant').forEach(participant => {
+        let data = {};
+        data.companyName = participant.querySelector('input[name="companyName"]').value;
+        data.companyAddress = participant.querySelector('input[name="companyAddress"]').value;
+        data.membershipNo = participant.querySelector('input[name="membershipNo"]').value;
+        data.turnover = participant.querySelector('input[name="turnover"]').value;
+        data.participantNumber = participant.querySelector('input[name="participantNumber"]').value;
+        data.participantName = participant.querySelector('input[name="participantName"]').value;
+        data.designation = participant.querySelector('input[name="designation"]').value;
+        data.phoneNo = participant.querySelector('input[name="phoneNo"]').value;
+        data.email = participant.querySelector('input[name="email"]').value;
+        data.altContactNo = participant.querySelector('input[name="altContactNo"]').value;
+        data.accommodation = participant.querySelector('input[name="accommodation"]').value;
+
+
+        // Add more fields as needed
+
+        participants.push(data);
+    });
+
+    formData.participants = participants;
+
+    fetch('https://docs.google.com/spreadsheets/d/17-wgNh4GSZy4F2myxrDhVmgR3KZDMmFJYeZ52QUQe2M/edit?pli=1&gid=0#gid=0', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    }).then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+}
+</script>
+
+
+</body>
+<script type="text/javascript">
+    $('#head_content').load('header.html');
+    $('#footer_content').load('footer.html');
+</script>
+</html>

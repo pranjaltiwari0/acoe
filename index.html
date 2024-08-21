@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACoE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="head_content"></div>
+
+        <!-- Header Section -->
+        <header>
+            <div class="header-section flex">
+                <div class="slogan-text flex">
+                    <h1>ACMA Center Of Excellence</h1>
+                </div>
+            </div>
+        </header>
+   
+    <!-- center -->
+     <section class="main-body">
+
+        <div class="bodymenu">
+            <a href="./about.html"><h2>About Us</h2></a>
+        </div>
+        <div class="bodymenu ">
+            <a href="./trainings.html"><h2>Training Programms</h2></a>
+        </div>
+        <div class="bodymenu ">
+            <h2>Training Caleder</h2>
+        </div>
+        <div class="bodymenu">
+            <h2>Gallery</h2>
+        </div>
+        <div class="bodymenu">
+            <h2>Saksham Samwad</h2>
+        </div>
+
+     </section>
+
+
+     <!-- review -->
+      <section class="review_column">
+        <div class="review_h2"><h2>Reviews:</h2></div>
+        <div class="review_main flex">
+        <div class="review">
+            <h3>Pranjal</h3>
+            <p>Acoe is good.Lorem ipsum odor amet, consectetuer adipiscing elit. Sit morbi libero pellentesque duis urna imperdiet nullam. Cursus turpis praesent fames diam praesent sem</p>
+        </div>
+        <div class="review">
+            <h3>Pranjal</h3>
+            <p>Acoe is good.Lorem ipsum odor amet, consectetuer adipiscing elit. Sit morbi libero pellentesque duis urna imperdiet nullam. Cursus turpis praesent fames diam praesent sem</p>
+        </div>
+        <div class="review">
+            <h3>Pranjal</h3>
+            <p>Acoe is good.Lorem ipsum odor amet, consectetuer adipiscing elit. Sit morbi libero pellentesque duis urna imperdiet nullam. Cursus turpis praesent fames diam praesent sem</p>
+
+        </div>
+        <div class="review">
+            <h3>Pranjal</h3>
+            <p>Acoe is good.Lorem ipsum odor amet, consectetuer adipiscing elit. Sit morbi libero pellentesque duis urna imperdiet nullam. Cursus turpis praesent fames diam praesent sem</p>
+
+        </div>
+        </div>
+      </section>
+     <!-- footer -->
+     <div id="footer_content"></div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/8d38d26177.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementById("nav-toggle");
+        const navlinks = document.getElementById("nav-links")
+        toggleButton.addEventListener('click', () => {
+            navlinks.classList.toggle('active');
+        })
+    </script>
+
+</body>
+<script type="text/javascript">
+    $('#head_content').load('header.html');
+    $('#footer_content').load('footer.html');
+</script>
+
+
+</html>

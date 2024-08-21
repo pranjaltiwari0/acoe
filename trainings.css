@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(240, 232, 232);
+    color: rgb(45, 15, 71);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(59, 59, 126);
+    color: white;
+    border: 2px solid rgb(9, 3, 68);
+}
+
+/* footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+
+footer p {
+    margin: 5px 0;
+}
+
+#main-section{
+    text-align: center;
+    height: 70vh;
+    margin: 100px;
+    background: url(./ACMA\ bg.png);
+    background-size: cover;
+}
+#main-section h2{
+    font-size: 3rem;
+    color: white;
+}
+.btn-ul{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.btn{
+    width: 300px;
+}

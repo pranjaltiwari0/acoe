@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+p{
+    font-family: 'Roboto',sans-serif;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+.main-nav{
+    background-color: #12154c;
+    position: relative;
+    top: 0;
+   
+    width: 100%;
+    max-width: 100%;
+    justify-content:space-between
+}
+.company-logo img{
+    width:200px;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    
+}
+
+/* Footer section */
+.footer-section-main{
+    background-color: #07407b;
+    background-size: cover;
+    max-width: 100%;
+}
+.footer-section{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    justify-content: space-between;
+}
+.footer-right{
+    flex-direction: column;
+    gap: px;
+    position: abs;
+    }
+.footer-right h1{
+    color: #ffffff;
+    
+}
+.icon{
+    gap: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px; 
+    align-items: start;
+    
+}
+.icon h4{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+/* subfooter section */
+
+.subfooter-section{
+    background-color: rgb(11, 1, 44);
+    color: white;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+.subfooter-left{
+    left: 50px;
+}
+.subfooter-right{
+
+    right: 50px;
+    gap: 30px;
+}
